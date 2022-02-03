@@ -573,6 +573,14 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
 		transform: none;
 	}
 
+	.menu__list__right {
+		display: -webkit-flex;
+		display: flex;
+		-webkit-flex-wrap: wrap;
+		flex-wrap: wrap;
+		margin-left: auto;
+	}
+
 	.menu__item {
 		border-left: 1px solid rgba(255, 255, 255, .1);
 	}

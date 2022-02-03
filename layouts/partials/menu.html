@@ -16,6 +16,19 @@
 		</li>
 		{{- end }}
 		{{- end }}
+		<div class="menu__list__right">
+			{{- range .Site.Menus.right }}
+			{{- if .Name }}
+			<li class="menu__item{{ if or ($currentNode.IsMenuCurrent "right" .) ($currentNode.HasMenuCurrent "right" .) }} menu__item--active{{ end }}">
+				<a class="menu__link" href="{{ .URL }}">
+					{{ .Pre }}
+					<span class="menu__text">{{ .Name }}</span>
+					{{ .Post }}
+				</a>
+			</li>
+			{{- end }}
+			{{- end }}
+		</div>
 	</ul>
 </nav>
 {{ else -}}
